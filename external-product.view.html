@@ -1,0 +1,220 @@
+<div class="m-subheader">
+    <div class="d-flex align-items-center">
+        <div class="mr-auto">
+            <h3 class="m-subheader__title m-subheader__title--separator" i18n>
+                Degalinių produktai
+            </h3>
+            <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+                <li class="m-nav__item m-nav__item--home">
+                    <a href="javascript:;" routerLink="/" class="m-nav__link m-nav__link--icon">
+                        <i class="m-nav__link-icon la la-home"></i>
+                    </a>
+                </li>
+                <li class="m-nav__separator">-</li>
+                <li class="m-nav__item">
+                    <a href="javascript:;" routerLink="/drivers" class="m-nav__link">
+                        <span class="m-nav__link-text" i18n>
+                            Degalinių produktai
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="kt-content kt-grid__item kt-grid__item--fluid" id="kt_content">
+  <div class="kt-portlet kt-portlet--mobile">
+    <div class="kt-portlet__body kt-portlet__body--fit">
+      <table [dataTable]="{ pageLength: itemsPerPage }" 
+      class="kt-datatable__table">
+        <thead class="kt-datatable__head">
+          <tr class="kt-datatable__row">
+            <th data-field="RecordID" class="kt-datatable__cell--center kt-datatable__cell kt-datatable__cell--sort">
+              <span ></span>
+            </th>
+            <th data-field="FirstName" class="kt-datatable__cell kt-datatable__cell--sort">
+              <span >First name</span>
+            </th>
+            <th data-field="LastName" class="kt-datatable__cell kt-datatable__cell--sort">
+              <span >Last name</span>
+            </th>
+            <th data-field="Company" class="kt-datatable__cell kt-datatable__cell--sort">
+              <span >Company</span>
+            </th>
+            <th data-field="Email" class="kt-datatable__cell kt-datatable__cell--sort">
+              <span >Email</span>
+            </th>
+            <th data-field="Status" class="kt-datatable__cell kt-datatable__cell--sort">
+              <span >Status</span>
+            </th>
+            <th data-field="Type" class="kt-datatable__cell kt-datatable__cell--sort">
+              <span >Type</span>
+            </th>
+            <th data-field="Actions" class="kt-datatable__cell kt-datatable__cell--sort">
+              <span >Actions</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody class="kt-datatable__body">
+          <tr data-row="0" class="kt-datatable__row kt-datatable__row--even">
+            <td class="kt-datatable__cell--center kt-datatable__cell" data-field="RecordID">
+              <a class="kt-datatable__toggle-subtable" href="#" data-value="1" title="Load sub table" style="width: 30px;">
+                <i class="fa fa-caret-right" style="width: 30px;"></i>
+              </a>
+            </td>
+            <td class="kt-datatable__cell" data-field="FirstName">
+              <span style="width: 133px;">Tommie</span>
+            </td>
+            <td class="kt-datatable__cell" data-field="LastName">
+              <span style="width: 133px;">Pee</span>
+            </td>
+            <td class="kt-datatable__cell" data-field="Company">
+              <span style="width: 133px;">Rodel</span>
+            </td>
+            <td class="kt-datatable__cell" data-field="Email">
+              <span style="width: 133px;">tommie@example.com</span>
+            </td>
+            <td class="kt-datatable__cell" data-field="Status">
+              <span style="width: 133px;">Success</span>
+            </td>
+            <td class="kt-datatable__cell" data-field="Type">
+              <span style="width: 133px;">Online</span>
+            </td>
+            <td class="kt-datatable__cell" data-field="Actions">
+              <span style="width: 133px;">Actions</span>
+            </td>
+          </tr>
+          <!--<tr class="kt-datatable__row-subtable kt-datatable__row-subtable--even">
+            <td class="kt-datatable__subtable">
+              <div id="child_data_local_1" class="kt-datatable kt-datatable--default kt-datatable--brand kt-datatable--scroll kt-datatable--loaded">
+                <table class="kt-datatable__table">
+                  <thead class="kt-datatable__head">
+                    <tr class="kt-datatable__row">
+                      <th data-field="OrderID" class="kt-datatable__cell kt-datatable__cell--sort">
+                        <span style="width: 149px;">OrderID</span>
+                      </th>
+                      <th data-field="ShipCountry" class="kt-datatable__cell kt-datatable__cell--sort">
+                        <span style="width: 149px;">Country</span>
+                      </th>
+                      <th data-field="ShipAddress" class="kt-datatable__cell kt-datatable__cell--sort">
+                        <span style="width: 149px;">Address</span>
+                      </th>
+                      <th data-field="ShipName" class="kt-datatable__cell kt-datatable__cell--sort">
+                        <span style="width: 149px;">Ship name</span>
+                      </th>
+                      <th data-field="TotalPayment" class="kt-datatable__cell kt-datatable__cell--sort">
+                        <span style="width: 149px;">Total payment</span>
+                      </th>
+                      <th data-field="Status" class="kt-datatable__cell kt-datatable__cell--sort">
+                        <span style="width: 149px;">Status</span>
+                      </th>
+                      <th data-field="Type" class="kt-datatable__cell kt-datatable__cell--sort">
+                        <span style="width: 149px;">Type</span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="kt-datatable__body ps ps--active-y" style="max-height: 246px;">
+                    <tr data-row="0" class="kt-datatable__row">
+                      <td class="kt-datatable__cell" data-field="OrderID">
+                        <span style="width: 149px;">41250-166 - FR</span>
+                      </td>
+                      <td class="kt-datatable__cell" data-field="ShipCountry">
+                        <span style="width: 149px;">FR</span>
+                      </td>
+                      <td class="kt-datatable__cell" data-field="ShipAddress">
+                        <span style="width: 149px;">5 Rutledge Court</span>
+                      </td>
+                      <td class="kt-datatable__cell" data-field="ShipName">
+                        <span style="width: 149px;">Rogahn</span>
+                      </td>
+                      <td class="kt-datatable__cell" data-field="TotalPayment">
+                        <span style="width: 149px;">6900</span>
+                      </td>
+                      <td class="kt-datatable__cell" data-field="Status">
+                        <span style="width: 149px;">Info</span>
+                      </td>
+                      <td class="kt-datatable__cell" data-field="Type">
+                        <span style="width: 149px;">Online</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="kt-datatable__pager kt-datatatable--paging-loaded">
+                  <ul class="kt-datatable__pager-nav">
+                    <li>
+                      <a title="First" class="kt-datatable__pager-link kt-datatable__pager-link--first kt-datatable__pager-link--disabled" data-page="1" disabled="disabled">
+                        <i class="flaticon2-fast-back"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a title="Previous" class="kt-datatable__pager-link kt-datatable__pager-link--prev kt-datatable__pager-link--disabled" data-page="1" disabled="disabled">
+                        <i class="flaticon2-back"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <input type="text" class="kt-pager-input form-control" title="Page number">
+                    </li>
+                    <li>
+                      <a class="kt-datatable__pager-link kt-datatable__pager-link-number kt-datatable__pager-link--active" data-page="1" title="1"></a>
+                    </li>
+                    <li>
+                      <a class="kt-datatable__pager-link kt-datatable__pager-link-number kt-datatable__pager-link--active" data-page="2" title="2"></a>
+                    </li>
+                    <li>
+                      <a class="kt-datatable__pager-link kt-datatable__pager-link-number kt-datatable__pager-link--active" data-page="3" title="3"></a>
+                    </li>
+                    <li>
+                      <a class="kt-datatable__pager-link kt-datatable__pager-link-number kt-datatable__pager-link--active" data-page="4" title="4"></a>
+                    </li>
+                    <li>
+                      <a class="kt-datatable__pager-link kt-datatable__pager-link-number kt-datatable__pager-link--active" data-page="5" title="5"></a>
+                    </li>
+                    <li>
+                      <a title="Next" class="kt-datatable__pager-link kt-datatable__pager-link--next" data-page="2">
+                        <i class="flaticon2-next"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a title="Last" class="kt-datatable__pager-link kt-datatable__pager-link--last" data-page="35">
+                        <i class="flaticon2-fast-next"></i>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="kt-datatable__pager-info">
+                    <div class="dropdown bootstrap-select kt-datatable__pager-size" style="width: 60px;">
+                      <select class="selectpicker kt-datatable__pager-size" title="Select page size" data-width="60px" data-selected="10" tabindex="-98">
+                        <option class="bs-title-option"></option>
+                        <option value="10">10</option>
+                        <option value="10">20</option>
+                        <option value="10">30</option>
+                        <option value="10">50</option>
+                        <option value="10">100</option>
+                      </select>
+                      <button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown" role="button" title="Select page size">
+                        <div class="filter-option">
+                          <div class="filter-option-inner">
+                            <div class="filter-option-inner-inner">10</div>
+                          </div>
+                        </div>
+                      </button>
+                      <div class="dropdown-menu" role="combobox">
+                        <div class="inner show" role="listbox" aria-expanded="false" tabindex="-1">
+                          <ul class="dropdown-menu inner show"></ul>
+                        </div>
+                      </div>
+                      <span class="kt-datatable__pager-detail">Showing 1 - 10 of 350</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>-->
+        </tbody>   
+    </table>
+</div>
+</div>
+    <div class="mat-table__message" *ngIf="products && products.length < 1 && !loading">
+        <ng-container i18n>Vairuotojų nėra.</ng-container>
+    </div>
+</div>
